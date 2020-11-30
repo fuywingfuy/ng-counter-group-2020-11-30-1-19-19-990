@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Counter } from '../models/counter';
 
 @Component({
   selector: 'app-counter-group',
@@ -9,9 +10,16 @@ export class CounterGroupComponent implements OnInit {
 
   public size: number = 5;
 
-  constructor() { }
+  public counters: Array<Counter>;
+
+  constructor() {
+    this.counters = new Array<Counter>();
+   }
 
   ngOnInit(): void {
+    for (let step = 0; step < this.size; step ++)
+    {
+      this.counters.push(new Counter());
+    }
   }
-
 }
