@@ -46,4 +46,15 @@ describe('CounterComponent', () => {
     // then
     expect(component.account).toBe(-1);
   });
+
+  it('should counter turn 0 when click reset button', () => {
+    // given
+    component.counter.counter = 10;
+
+    // when
+    component.reset();
+
+    // then
+    expect(component.account).toBe(0);
+  });
 });
