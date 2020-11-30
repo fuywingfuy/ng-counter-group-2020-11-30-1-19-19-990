@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CounterGroupComponent implements OnInit {
 
+  public size: number = 5;
+
   constructor() { }
 
   ngOnInit(): void {
