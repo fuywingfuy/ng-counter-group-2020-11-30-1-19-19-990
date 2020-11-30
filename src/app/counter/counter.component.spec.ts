@@ -23,9 +23,9 @@ describe('CounterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should increase account when call increase', () => {
+  it('should increase counter.account when call increase', () => {
     // given
-    component.account = 0;
+    component.counter.counter = 0;
 
     // when
     component.increase();
@@ -36,7 +36,7 @@ describe('CounterComponent', () => {
 
   it('should decrease account when call decrease', () => {
     // given
-    component.account = 0;
+    component.counter.counter = 0;
 
     // when
     component.decrease();
