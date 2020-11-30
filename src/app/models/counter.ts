@@ -6,10 +6,10 @@ export class Counter {
   }
 
   public increase(): void {
-    this.counter ++;
+    this.counter++;
   }
 
   public decrease(): void {
-    this.counter --;
+    this.counter--;
   }
 }
