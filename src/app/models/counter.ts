@@ -1,7 +1,7 @@
 export class Counter {
   public counter: number;
 
-  constructor(counter: number = 0) {
+  constructor(counter: number = 4) {
     this.counter = counter;
   }
 

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NzButtonSize } from 'ng-zorro-antd/button';
 import { CounterGroupService } from '../service/counter-group';
 
 @Component({
@@ -8,7 +9,9 @@ import { CounterGroupService } from '../service/counter-group';
 })
 export class CounterGroupComponent implements OnInit {
 
-  public size: number = 5;
+  public sizechange: number = 5;
+
+  size: NzButtonSize = 'default';
 
   public counters = this.counterGroupService.counters;
 
@@ -23,7 +26,11 @@ export class CounterGroupComponent implements OnInit {
   }
 
   public setSize(): void {
-    this.counterGroupService.setSize(this.size);
+    this.counterGroupService.setSize(this.sizechange);
     this.counters = this.counterGroupService.counters;
+  }
+
+  public reset(): void {
+    this.counterGroupService.reset();
   }
 }

@@ -51,4 +51,15 @@ describe('CounterGroupService', () => {
   it('should contain counters when create instance', () => {
     expect(service.counters.length).toBe(service.size);
   });
+
+  it('should sum turn 0 when call reset method', () => {
+    // given
+
+    // when
+    service.reset();
+    const actualSum = service.sum();
+
+    // then
+    expect(actualSum).toBe(0);
+  });
 });

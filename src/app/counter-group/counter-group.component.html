@@ -2,9 +2,12 @@
   <input type="number" min="1" max="10" #size {keyup.enter}="setSize(size.value)">
   <button (click) ="setSize(size.value)">SetSize</button>
 </div> -->
-<input [(ngModel)] = "size" type="number"> <button (click)="setSize()">setSize</button>
+<input type="number" nz-input [(ngModel)]="sizechange" placeholder="input values"/> &nbsp; &nbsp; <button nz-button [nzSize]="size" nzType="primary" nzShape="round" (click)="setSize()"><strong>setSize</strong></button>
+<!-- <input [(ngModel)] = "sizechange" type="number"> <button nz-button [nzSize]="size" nzType="primary" (click)="setSize()">setSize</button> -->
 <div *ngFor= "let counter of counters">
   <app-counter [counter] = "counter"></app-counter>
 </div>
-<label>{{sum()}}</label>
+<button nz-button nzType="text"><strong>{{sum()}}</strong></button>
+<!-- <label>{{sum()}}</label> -->
+<button nz-button [nzSize]="size" nzType="primary" nzShape="round" (click)="reset()">SumReset</button>
 

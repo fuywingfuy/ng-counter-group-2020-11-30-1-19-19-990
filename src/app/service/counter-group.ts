@@ -31,4 +31,8 @@ export class CounterGroupService {
   public sum(): number {
     return this.counters.reduce((res, element) =>  res + element.counter, 0);
   }
+
+  public reset(): void {
+    this.counters.forEach(counter => counter.reset());
+  }
 }

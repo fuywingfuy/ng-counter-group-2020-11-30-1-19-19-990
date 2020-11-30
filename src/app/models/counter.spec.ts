@@ -17,7 +17,7 @@ describe('Counter', () => {
   });
 
   it('should set account when create an instance', () => {
-    expect(new Counter().counter).toBe(0);
+    expect(new Counter().counter).toBe(4);
   });
 
   it('should increase counter by 1 when call increase', () => {
